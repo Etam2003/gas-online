@@ -1,0 +1,41 @@
+<div class="main">
+    <mat-card>
+        <mat-card-content>
+            <div class="card">
+                <mat-icon>
+                    local_fire_department
+                </mat-icon>
+                <div class="card-inside">
+                    <div>
+                        <h4>
+                            {{location?.street}} {{location?.streetNumber}} 
+                        </h4>
+                        <p>
+                            {{location?.zipcode}}. {{location?.city}}
+                        </p>
+                    </div>
+                    <h3 class="inside-h2">
+                        <button (click)="sendData()">Diktálok</button>
+                    </h3>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <div class="icon">
+        <img src="../../../assets/gas-meter.jpg" alt="gas">
+    </div>
+    <mat-card-content>
+            <h1>Mérőóra</h1>
+            <hr>
+            <ul class="list" >
+                <li><h2>Mérő gyártási száma</h2> <p>{{meterData?.meterid}}</p></li>
+                <li><h2>Utolsó rögzítés időpontja</h2><p>{{formattedDate}}</p></li>
+                <li><h2>Korábbi mérőllás</h2><p>{{meterData?.lastdata}} m<sup>3</sup></p></li>
+                <li class="actual">
+                    <h2>Aktuális állás</h2>
+                    <p><input mat-input [formControl]="actualdata" type="number" class="in"></p>
+                </li>
+            </ul>
+    </mat-card-content>
+
+</div>

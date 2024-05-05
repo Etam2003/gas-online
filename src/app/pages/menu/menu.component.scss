@@ -1,0 +1,24 @@
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+a mat-icon{
+    padding-right: 10px;
+}
+
+.list{
+    padding: 0;
+}
+
+.mdc-list-item__content{
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+}

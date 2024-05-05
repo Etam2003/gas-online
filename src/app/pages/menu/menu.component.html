@@ -1,0 +1,27 @@
+<mat-nav-list class="list">
+    <h3>{{ currentDateTime | dateFormat }}</h3>
+    <a class="menu" mat-list-item routerLink="/login" (click)="close()" *ngIf="!loggedInUser">
+        <mat-icon>login</mat-icon>
+        <span>Bejelentkezés</span>
+    </a>
+    <a class="menu" mat-list-item routerLink="/login" (click)="close(true)" *ngIf="loggedInUser">
+        <mat-icon>logout</mat-icon>
+        <span>Kijelentkezés</span>
+    </a>
+    <a class="menu" mat-list-item routerLink="/signup" (click)="close()" *ngIf="!loggedInUser">
+        <mat-icon>app_registration</mat-icon>
+        <span>Regisztráció</span>
+    </a>
+    <a class="menu" mat-list-item routerLink="/main" (click)="close()"*ngIf="loggedInUser">
+        <mat-icon>gas_meter</mat-icon>
+        <span>Főoldal</span>
+    </a>
+    <a class="menu" mat-list-item routerLink="/bill" (click)="close()"*ngIf="loggedInUser">
+        <mat-icon>receipt_long</mat-icon>
+        <span>Számlám</span>
+    </a>
+    <a class="menu" mat-list-item routerLink="/dial-indicator" (click)="close()"*ngIf="loggedInUser">
+        <mat-icon>history_toggle_off</mat-icon>
+        <span>Mérő óráim</span>
+    </a>
+</mat-nav-list>

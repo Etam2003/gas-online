@@ -1,0 +1,80 @@
+<div class="main">
+    <div class="bill">
+        <h1> Folyamatban lévő és befizetett számláim </h1>
+        <mat-card>
+            <mat-card-content>
+                <div class="card">
+                    <h4>
+                        Gázszámla
+                    </h4>
+                    <div class="card-inside">
+                        <div class="inside-div">
+                            <h4>
+                                {{location?.street}} {{location?.streetNumber}}
+                            </h4>
+                            <p>
+                                {{location?.zipcode}}. {{location?.city}}
+                            </p>
+                        </div>
+                        <h3 class="inside-h2">
+                            {{payDay}} nap befizetésig
+                        </h3>
+                    </div>
+                    <div class="card-inside">
+                        <div style="display: block; width: 96%;">
+                            <h1 style="padding-left: 10px;">Részletek</h1>
+                            <hr>
+                            <ul class="list">
+                                <li>
+                                    <h2>Fizetési határidő</h2>
+                                    <p>{{formattedPDate}} </p>
+                                </li>
+                                <li>
+                                    <h2>Felhasználási hely</h2>
+                                    <p>{{location?.zipcode}}. {{location?.city}}</p>
+                                </li>
+                                <li>
+                                    <h2>Elszámolási időszak</h2>
+                                    <p>{{formattedDate}} - {{formattedPDate}}</p>
+                                </li>
+                                <li>
+                                    <h2>Számla sorszáma</h2>
+                                    <p>{{invoiceNumber}}</p>
+                                </li>
+                                <li>
+                                    <h2>Energiafogyasztás</h2>
+                                    <p>{{meterData?.lastdata}} m<sup>3</sup>/év</p>
+                                </li>
+                            </ul>
+                            <ul class="list"  [ngStyle]="{ 'background-color': '#f2f2f2', 'width':'98%' }">
+                                <li>
+                                    <h2>Fizetendő összeg</h2>
+                                    <p>{{ price }} Ft</p>
+                                </li>
+                                <li>
+                                    <button (click)="buy()">Befizetés</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-inside-tips">
+                        <div class="tips">
+                            <h2>Mit tegyél, hogy elkerüld, hogy ne fogyassz ennyit, mint  {{loc}}-on  {{most}}m<sup>3</sup></h2>
+                        </div>
+                        <div class="tips">
+                            <h2>Hasznos tippek a spóroláshoz:</h2>
+                            <mat-list>
+                                <mat-list-item *ngFor="let tip of tips; let i = index;" [ngClass]="i % 2 === 0 ? 'list-even': 'list-odd'">
+                                  <h2>{{ tip.cim }}</h2>
+                                  <p>{{ tip.tartalom }}</p>
+                                  <p>Értékelés: {{ tip.ertekeles }}/10</p>
+                                  <p>Dátum: {{ tip.datum.toLocaleDateString() }}</p>
+                                </mat-list-item>
+                              </mat-list>
+                        </div>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

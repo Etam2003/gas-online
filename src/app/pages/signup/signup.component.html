@@ -1,0 +1,59 @@
+<div class="page">
+    <div class="white">
+        <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+            <mat-icon class="mat-18">vpn_key</mat-icon>
+            <h1>Regisztráció</h1>
+            <div formGroupName="name">
+                <mat-form-field class="block">
+                    <mat-label for="lastname">Kérjük, adja meg vezetéknevét</mat-label>
+                    <input matInput formControlName="lastname" placeholder="Gipsz">
+                </mat-form-field>
+                <mat-form-field class="block">
+                    <mat-label for="firstname">Kérjük, adja meg keresztnevét</mat-label>
+                    <input matInput formControlName="firstname" placeholder="Jakab">
+                </mat-form-field>
+            </div>
+            <mat-form-field class="block">
+                <mat-label for="email">Kérjük, adja meg e-mail-címét</mat-label><br>
+                <input matInput type="text" formControlName="email" placeholder="gipsz.jakab@gmail.com">
+            </mat-form-field>
+            <mat-form-field class="block">
+                <mat-label for="password"> Kérjük, adjon meg egy jelszót</mat-label>
+                <input matInput type="password" formControlName="password" placeholder="(6 karater kis és nagybetűt is tartalmazzon)">
+            </mat-form-field>
+            <mat-form-field class="block">
+                <mat-label for="rePassword">Kérjük, erősítse meg jelszavát</mat-label><br>
+                <input matInput type="password" formControlName="rePassword">
+            </mat-form-field>
+            <div formGroupName="location">
+                <mat-form-field class="block">
+                    <mat-label for="zipcode">Irányítószám</mat-label>
+                    <input matInput formControlName="zipcode" placeholder="1234">
+                </mat-form-field>
+                <mat-form-field class="block">
+                    <mat-label for="city">Város</mat-label>
+                    <input matInput formControlName="city" placeholder="Pécs">
+                </mat-form-field>
+                <mat-form-field class="block">
+                    <mat-label for="street">Utca</mat-label>
+                    <input matInput formControlName="street" placeholder="Kossuth utca">
+                </mat-form-field>
+                <mat-form-field class="block">
+                    <mat-label for="streetNumber">Házszám</mat-label>
+                    <input matInput formControlName="streetNumber" placeholder="12/A">
+                </mat-form-field>
+            </div>
+            <div>
+                <button type="submit">Regisztrálok</button>
+                <h1>Nincs még fiókja?</h1>
+                <button class="inverse" [routerLink]="'/login'">Már van fiókom belépek</button>
+            </div>
+
+
+
+        </form>
+
+    </div>
+
+
+</div>

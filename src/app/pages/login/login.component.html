@@ -1,0 +1,21 @@
+<div class="page">
+    <div class="white">
+        <div>
+            <mat-icon class="mat-18">vpn_key</mat-icon>
+            <h1>Bejelentkezés</h1>
+            <mat-form-field class="block">
+                <mat-label for="email">E-mail-cím</mat-label><br>
+                <input matInput [formControl]="email">
+            </mat-form-field>
+            <mat-form-field class="block">
+                <mat-label for="password">Jelszó</mat-label><br>
+                <input matInput type="password"[formControl]="password" autocomplete="current-password webauthn">
+            </mat-form-field>
+            <div>
+                <button mat-button (click)="login()">Belépek</button>
+                <h1>Nincs még fiókja?</h1>
+                <button class="inverse" [routerLink]="'/signup'">Regisztrálok</button>
+            </div>
+        </div>
+    </div>
+</div>

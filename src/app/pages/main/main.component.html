@@ -1,0 +1,59 @@
+<div class="main">
+    <div class="year">
+        <h1> Éves energiafogyasztás </h1>
+        <p>Éves fogyasztását az előző év elszámolása szerint adjuk meg, új szerződés esetén az eddigi fogyasztás alapján
+            becsüljük. </p>
+        <mat-card>
+            <mat-card-content>
+                <div class="card">
+                    <mat-icon>
+                        local_fire_department
+                    </mat-icon>
+                    <div class="card-inside">
+                        <div>
+                            <h4>
+                                {{location?.street}} {{location?.streetNumber}}
+                            </h4>
+                            <p>
+                                {{location?.zipcode}}. {{location?.city}}
+                            </p>
+                        </div>
+                        <h3 class="inside-h2">
+                            {{meterData?.lastdata}} m<sup>3</sup>/év
+                        </h3>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <div class="bill">
+        <div>
+            <h1> Aktuális számláim </h1>
+        </div>
+        <button mat-flat-button color="primary" routerLink="/bill">Számláim</button>
+    </div>
+
+    <div class="bill">
+        <div>
+            <h1> Diktálási időszak van </h1>
+            <p> Diktálási vagy leolvasási időszak van! </p>
+        </div>
+        <button mat-flat-button color="primary" routerLink="/dial-indicator">Diktálok</button>
+    </div>
+    <div class="bill">
+        <div>
+            <h1> Nem szeretné már a szolgáltatást igénybe venni </h1>
+            <p> Törölje fiókját és az összes adatát</p>
+        </div>
+        <button mat-flat-button color="primary" (click)="delete()">Törlés</button>
+    </div>
+    <div class="article">
+        <mat-card *ngFor="let article of articles">
+            <img [src]="article.img" alt="">
+            <h4>{{ article.cim }}</h4>
+            <h5>{{ article.tartalom }}</h5>
+            <a href="#" class="link-button" (click)="openUrl(article.url, $event)">Megnézem</a>
+        </mat-card>
+    </div>
+</div>

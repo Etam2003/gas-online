@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "gasonline-2024": {
+      "hosting": {
+        "gas-online": [
+          "gasonline-2024"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "gasonline-2024"
+  }
+}

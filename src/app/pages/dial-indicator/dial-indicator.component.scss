@@ -1,0 +1,150 @@
+$back: #e2e1e0;
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid rgb(140, 140, 140);
+    border-radius: 20px;
+    margin: 3%;
+}
+
+h1 {
+    font-weight: bold;
+    margin: 0;
+}
+
+h2 {
+    text-align: left;
+    display: flex;
+    margin: 0 0 0 0;
+}
+
+h3 {
+    float: right;
+    font-size: larger;
+    font-weight: bold;
+    margin: 0 0 0 0;
+    margin-left: auto;
+}
+
+h4 {
+    display: block;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    margin: 10px 0 0 0;
+}
+
+.mdc-card {
+    background-color: $back;
+    margin: 10px;
+}
+
+hr {
+    background-color: darkblue;
+    height: 3px;
+    margin-bottom: 30px;
+}
+
+.mat-mdc-card-content:last-child {
+    padding-bottom: 0;
+}
+
+.mat-mdc-card-content:first-child {
+    padding-top: 0;
+}
+
+h2 {
+    font-weight: bold;
+    color: rgb(58, 58, 58);
+}
+
+ul {
+    padding: 0;
+}
+
+button {
+    font-weight: bold;
+    background-color: #005b5b;
+    height: 40px;
+    color: white;
+    width: 150px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 500px) {
+    .list li {
+        display: block;
+    }
+}
+
+p {
+    margin-left: auto;
+}
+
+p input {
+    border-radius: 5px;
+    border: 1px solid;
+    height: 30px;
+}
+
+.actual{
+    margin-top: 54px;
+}
+
+mat-icon {
+    display: block;
+    color: #fccf09;
+}
+
+
+img {
+    margin-top: 30px;
+    width: auto;
+    height: 160%;
+}
+
+.icon {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.mat-mdc-card {
+    display: block;
+    margin-right: 1vh;
+    margin-top: 30px;
+}
+
+.card {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+
+}
+
+.card-inside {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    width: 100%;
+}
+
+.card-outside {
+    display: block;
+    align-items: center;
+    margin: 15px;
+    width: 100%;
+}
