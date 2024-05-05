@@ -1,6 +1,7 @@
 # GasOnline
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+This project node version is 20.12.0.
 
 ## Development server
 
